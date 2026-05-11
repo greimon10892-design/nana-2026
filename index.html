@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 <title>La Nana 2026 – Cuenta Regresiva</title>
 <meta property="og:title" content="Mega Experiencia &quot;La Nana&quot; 2026 – Cuenta Regresiva">
 <meta property="og:description" content="7, 8 y 9 de Agosto 2026 · Hacienda La Fortaleza · Paso de la Milpa, Actopan, Veracruz · Candela, Amor y Servicio">
@@ -18,13 +19,14 @@
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 html, body {
   width: 100%; height: 100%;
-  display: flex; justify-content: center; align-items: center;
+  margin: 0; padding: 0;
   background: #111; overflow: hidden;
 }
 .frame {
-  width: 405px; height: 720px;
+  width: 100vw;
+  height: 100vh;
   position: relative; overflow: hidden;
-  border-radius: 2px;
+  border-radius: 0;
 }
 .bg-img {
   position: absolute; inset: 0; width: 100%; height: 100%;
@@ -45,12 +47,12 @@ html, body {
 .cd-panel {
   position: absolute;
   bottom: 0; left: 0; right: 0;
-  padding: 14px 18px 20px;
+  padding: clamp(10px, 3vh, 24px) clamp(12px, 4vw, 24px) clamp(14px, 4vh, 28px);
   display: flex; flex-direction: column; align-items: center; gap: 8px;
   z-index: 10;
 }
 .cd-pre {
-  font-family: 'Cinzel', serif; font-size: 8.5px;
+  font-family: 'Cinzel', serif; font-size: clamp(8px, 2.2vw, 13px);
   letter-spacing: 3px; color: rgba(212,175,55,0.9);
   text-transform: uppercase;
 }
@@ -71,25 +73,25 @@ html, body {
   content: ''; position: absolute; left: 8%; right: 8%; top: 50%;
   height: 0.5px; background: rgba(212,175,55,0.2);
 }
-#days-val  { font-size: 42px; line-height: 1; min-width: 82px; color: #d4af37; }
-.cd-val-sm { font-size: 26px; line-height: 1; color: #f0dfa0; }
+#days-val  { font-size: clamp(38px, 12vw, 72px); line-height: 1; min-width: clamp(70px, 20vw, 100px); color: #d4af37; }
+.cd-val-sm { font-size: clamp(22px, 7vw, 42px); line-height: 1; color: #f0dfa0; min-width: clamp(52px, 15vw, 80px); }
 .cd-lbl {
-  font-family: 'Cinzel', serif; font-size: 7px; letter-spacing: 1.8px;
+  font-family: 'Cinzel', serif; font-size: clamp(7px, 2vw, 11px); letter-spacing: 1.8px;
   color: rgba(212,175,55,0.65); text-transform: uppercase; margin-top: 3px;
 }
 .cd-sep {
-  font-family: 'Cinzel', serif; font-size: 22px;
-  color: rgba(212,175,55,0.5); line-height: 1; margin-bottom: 18px;
+  font-family: 'Cinzel', serif; font-size: clamp(18px, 5vw, 32px);
+  color: rgba(212,175,55,0.5); line-height: 1; margin-bottom: clamp(12px, 4vw, 22px);
   animation: sepBlink 1s ease-in-out infinite;
 }
 @keyframes sepBlink { 0%,100%{opacity:1} 50%{opacity:0.15} }
 
 .cd-slogan {
   font-family: 'Playfair Display', serif; font-style: italic;
-  font-size: 11px; color: rgba(245,230,176,0.8);
+  font-size: clamp(11px, 3vw, 17px); color: rgba(245,230,176,0.8);
 }
 .cd-date {
-  font-family: 'Cinzel', serif; font-size: 12px; font-weight: 700;
+  font-family: 'Cinzel', serif; font-size: clamp(12px, 3.5vw, 20px); font-weight: 700;
   color: #d4af37; letter-spacing: 1px;
   text-shadow: 0 0 12px rgba(212,175,55,0.6);
 }
